@@ -1,0 +1,138 @@
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Formulário De Pesquisa</h1>
+    <p id="description">Formulário com o intuito de melhorar a funcionaliade do site</p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Nome</label>
+        <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+        <p></p>
+
+        <label id="email-label" for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu email">
+        <p></p>
+
+        <label id="number-label" for="number">Idade</label>
+        <input type="number" id="number" name="number" min="1" max="100" placeholder="Insira sua idade">
+        <p></p>
+
+        <label for="dropdown">Qual opção se encaixa com sua situação?</label>
+        <select id="dropdown" name="dropdown">
+          <option value="" disabled selected>Marque uma opção</option>
+            <option value="opcao1">Estudante</option>
+            <option value="opcao2">Empregado Profissionalmente</option>
+            <option value="opcao3">Estagiario</option>
+            <option value="opcao4">Nulo</option>
+        </select>
+         <p></p>
+
+        <label> FreeCodeCamp é recomendável para você?</label>
+        <input type="radio" id="opcao1" name="radio-group" value="opcao1">
+        <label for="opcao1">Sim</label><br>
+        <input type="radio" id="opcao2" name="radio-group" value="opcao2">
+        <label for="opcao2">Talvez</label><br>
+        <input type="radio" id="opcao3" name="radio-group" value="opcao2">
+        <label for="opcao3">Não</label><br>
+        <p></p>
+
+         <label for="dropdown">Qual é o seu recurso favorito do freeCodeCamp?</label>
+        <select id="dropdown" name="dropdown">
+          <option value="" disabled selected>Marque uma opção</option>
+            <option value="opcao1">Desafios</option>
+            <option value="opcao2">Projetos</option>
+            <option value="opcao3">Comunidade</option>
+            <option value="opcao4">Código aberto</option>
+        </select>
+
+        <label>O que você gostaria de ver melhorado? (Marque todas as opções aplicáveis)</label>
+        <input type="checkbox" id="checkbox1" name="checkbox-group" value="valor1">
+        <label for="checkbox1">Projetos front-end</label><br>
+        <input type="checkbox" id="checkbox2" name="checkbox-group" value="valor2">
+        <label for="checkbox2">Projetos back-end </label><br>
+        <input type="checkbox" id="checkbox3" name="checkbox-group" value="valor3">
+        <label for="checkbox3">Vizualização de dados</label><br>
+        <input type="checkbox" id="checkbox4" name="checkbox-group" value="valor4">
+        <label for="checkbox4">Desafios</label><br>
+        <input type="checkbox" id="checkbox5" name="checkbox-group" value="valor5">
+        <label for="checkbox5">Videos</label><br>
+        <input type="checkbox" id="checkbox6" name="checkbox-group" value="valor6">
+        <label for="checkbox6">Cursos adcionais</label><br>
+        <input type="checkbox" id="checkbox7" name="checkbox-group" value="valor7">
+        <label for="checkbox7">Fórum</label><br>
+        <input type="checkbox" id="checkbox8" name="checkbox-group" value="valor8">
+        <label for="checkbox8">Salas de ajuda do Gitter</label><br>
+        <p></p>
+        <label for="comments">Algum comentário ou sugestão?</label><br>
+        <textarea id="comments" name="comments" placeholder="Digite seu comentário"></textarea>
+        <p></p>
+
+        <input type="submit" id="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+CSS:
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0d0d0;
+    padding: 20px;
+}
+
+#title {
+    color: #333;
+    text-align: center;
+}
+
+#description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#survey-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+select, input[type="radio"], input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="radio"] + label {
+    display: inline;
+}
+input[type="checkbox"] + label {
+    display: inline;
+}

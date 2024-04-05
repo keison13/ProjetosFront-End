@@ -1,0 +1,103 @@
+HTML: 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#welcome-section">Boas-vindas</a><br>
+        <a href="#projects">Projetos</a><br>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <section id="welcome-section">
+        <h1>Olá, bem-vindo ao meu portfólio!</h1>
+    </section>
+
+    <section id="projects">
+        <div class="project-tile">
+            <h2>Projetos</h2>
+            <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form" target="_blank">Formulário De Pesquisa</a><br>
+             <a id="profile-link" href="https://github.com/keison13/ProjetosInterface" target="_blank"> Repositório Do GitHub</a>
+        </div>
+    </section>
+
+   
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Email: keison.filho@aluno.uepb.edu.br</p>
+        <p>Celular: (83) 99643-5093</p>
+        <p>Instagram: <a href="https://www.instagram.com/keison_travassos/" target="_blank">@keison_travassos</a></p>
+    </section>
+</body>
+</html>
+
+CSS: 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4; 
+    color: #333;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#navbar a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#welcome-section, #projects, #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 250px 100px;
+}
+
+.project-tile {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    #welcome-section, #projects, #contact {
+        font-size: 18px;
+    }
+}
+
+#contact h2, #projects h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#contact p, #projects p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#contact a, #projects a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
